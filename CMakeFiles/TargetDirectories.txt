@@ -1,3 +1,0 @@
-/home/ruzen42/src/fastpass/CMakeFiles/rebuild_cache.dir
-/home/ruzen42/src/fastpass/CMakeFiles/edit_cache.dir
-/home/ruzen42/src/fastpass/CMakeFiles/fastpass.dir
