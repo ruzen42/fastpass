@@ -47,6 +47,10 @@ int main(int argc, char* argv[])
          */ 
 
         cout << GenPass(length,hight,digits,signs) << "\n";
-        system("pause");
+
+		#ifdef _WIN32
+			system("pause");
+		#endif
+
         return 0;
 }

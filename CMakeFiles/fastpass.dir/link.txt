@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/fastpass.dir/src/main.cpp.o -o fastpass 
