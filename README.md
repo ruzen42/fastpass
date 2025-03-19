@@ -1,6 +1,5 @@
 # fastpass
 ![GitHub Release](https://img.shields.io/github/v/release/ruzen42/fastpass?include_prereleases&sort=date&display_name=release&style=for-the-badge) 
-![GitHub License](https://img.shields.io/github/license/ruzen42/fastpass?style=for-the-badge)
 ![GitHub repo size](https://img.shields.io/github/repo-size/ruzen42/fastpass?style=for-the-badge)
 
 **Fastpass** is a simple, fast, and minimalistic C++ command-line tool for generating secure random passwords and storing them locally.  
