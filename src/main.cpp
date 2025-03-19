@@ -11,45 +11,42 @@ using namespace std;
 #define DIGITS 1
 #define SIGNS 1
 
-string 
-GenPass(long long length)
+string GenPass(long long length,bool h,bool d,bool s)
 {
     srand (time(NULL));
 	string chars, pass;
 
-	#if HIGH
+	if(h)
 		chars += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    #endif
-
-	#if DIGITS
+	if(d)
 		chars += "0123456789";	
-    #endif
 
-	#if SIGNS
+	if(s)
 		chars += "()/*-+?!@#$^&*_=<>[]{}:;,.";
-	#endif
 
-	for (long long i {0}; i < length; i++) 
-		pass = pass + chars[rand() % chars.size() + 1]; srand (time(NULL));
-
+	for (short i = 0; i < length; i++)
+    {
+        char ch = chars[rand() % chars.length()];
+		pass.push_back(ch);
+    }
+    
     return pass;
 }
 
-int
-main(int argc, char* argv[])
+int main(int argc, char* argv[])
 {
         long long length = 8;
+
+        bool digits = true;
+        bool hight = true;
+        bool signs = true;
 
         /* settings[0] is high register characters
          * settings[1] is digits
          * settings[2] is signs
          */ 
 
-        if (argc > 1)
-            length = atoi(argv[1]);
-
-        cout << GenPass(length) << "\n";
-
+        cout << GenPass(length,hight,digits,signs) << "\n";
+        system("pause");
         return 0;
 }
-
