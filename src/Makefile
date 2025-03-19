@@ -25,4 +25,4 @@ slackware: all
 	mkdir -p dist/usr/bin dist/install 
 	cp ../build/fastpass dist/usr/bin/fastpass
 	cp slack-desc dist/install/slack-desc
-	cd dist && makepkg -l y -c y ../fastpass-$(VER)-$(ARCH)-$(BUILD).txz
+	cd dist && makepkg -l y -c y ../fastpass-$(VER)-$(ARCH)-$(BUILD).tgz
