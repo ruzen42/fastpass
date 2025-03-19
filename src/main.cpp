@@ -26,7 +26,7 @@ GenPass(long long length)
     #endif
 
 	#if SIGNS
-		chars += "()/*-+?№!@#$%^&*_=<>[]{}:;,.";
+		chars += "()/*-+?!@#$^&*_=<>[]{}:;,.";
 	#endif
 
 	for (long long i {0}; i < length; i++) 
