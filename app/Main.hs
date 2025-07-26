@@ -1,8 +1,10 @@
 module Main where
 
 import RandomGenerator
+import Control.Concurrent.Async (wait)
 
 main :: IO ()
 main = do 
-  password <- RandomGenerator.generatePassword 8
+  task <- RandomGenerator.generatePasswordAsync 8
+  password <- wait task 
   putStrLn password

@@ -1,7 +1,9 @@
 module RandomGenerator (generatePasswordAsync) where
 
-import System.Random 
+import System.Random
+import Control.Monad (replicateM)
 import Data.Char (ord, chr)
+import Control.Concurrent.Async (async, wait, Async)
 
 charSet :: String 
 charSet = ['a'..'z'] ++ ['A'..'Z'] ++ ['0'..'9'] ++ "!@#$%^&*(){}\\=-<>:~"

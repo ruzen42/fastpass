@@ -47,7 +47,7 @@ getBinDir, getLibDir, getDynLibDir, getDataDir, getLibexecDir, getSysconfDir :: 
 
 bindir, libdir, dynlibdir, datadir, libexecdir, sysconfdir :: FilePath
 bindir     = "/home/ruzen42/src/fastpass/.stack-work/install/x86_64-linux/b0e18f6dca427632bfca93750fea1327ed16622e20180799c85f4f707de7939d/9.10.2/bin"
-libdir     = "/home/ruzen42/src/fastpass/.stack-work/install/x86_64-linux/b0e18f6dca427632bfca93750fea1327ed16622e20180799c85f4f707de7939d/9.10.2/lib/x86_64-linux-ghc-9.10.2-35d5/fastpass-0.1.0.0-76OKmYOHMrHH8OHWXHFIAN"
+libdir     = "/home/ruzen42/src/fastpass/.stack-work/install/x86_64-linux/b0e18f6dca427632bfca93750fea1327ed16622e20180799c85f4f707de7939d/9.10.2/lib/x86_64-linux-ghc-9.10.2-35d5/fastpass-0.1.0.0-7t8BNcxgKiZ1AepiJFVWaQ"
 dynlibdir  = "/home/ruzen42/src/fastpass/.stack-work/install/x86_64-linux/b0e18f6dca427632bfca93750fea1327ed16622e20180799c85f4f707de7939d/9.10.2/lib/x86_64-linux-ghc-9.10.2-35d5"
 datadir    = "/home/ruzen42/src/fastpass/.stack-work/install/x86_64-linux/b0e18f6dca427632bfca93750fea1327ed16622e20180799c85f4f707de7939d/9.10.2/share/x86_64-linux-ghc-9.10.2-35d5/fastpass-0.1.0.0"
 libexecdir = "/home/ruzen42/src/fastpass/.stack-work/install/x86_64-linux/b0e18f6dca427632bfca93750fea1327ed16622e20180799c85f4f707de7939d/9.10.2/libexec/x86_64-linux-ghc-9.10.2-35d5/fastpass-0.1.0.0"

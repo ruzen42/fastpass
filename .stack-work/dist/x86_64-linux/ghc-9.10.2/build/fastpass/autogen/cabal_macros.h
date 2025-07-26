@@ -10,6 +10,16 @@
   (major1) == 0 && (major2) <  1 || \
   (major1) == 0 && (major2) == 1 && (minor) <= 0)
 #endif /* MIN_VERSION_fastpass */
+/* package async-2.2.5 */
+#ifndef VERSION_async
+#define VERSION_async "2.2.5"
+#endif /* VERSION_async */
+#ifndef MIN_VERSION_async
+#define MIN_VERSION_async(major1,major2,minor) (\
+  (major1) <  2 || \
+  (major1) == 2 && (major2) <  2 || \
+  (major1) == 2 && (major2) == 2 && (minor) <= 5)
+#endif /* MIN_VERSION_async */
 /* package base-4.20.1.0 */
 #ifndef VERSION_base
 #define VERSION_base "4.20.1.0"
@@ -40,6 +50,16 @@
   (major1) == 0 && (major2) <  18 || \
   (major1) == 0 && (major2) == 18 && (minor) <= 1)
 #endif /* MIN_VERSION_optparse_applicative */
+/* package tasty-1.5.3 */
+#ifndef VERSION_tasty
+#define VERSION_tasty "1.5.3"
+#endif /* VERSION_tasty */
+#ifndef MIN_VERSION_tasty
+#define MIN_VERSION_tasty(major1,major2,minor) (\
+  (major1) <  1 || \
+  (major1) == 1 && (major2) <  5 || \
+  (major1) == 1 && (major2) == 5 && (minor) <= 3)
+#endif /* MIN_VERSION_tasty */
 
 /* tool gcc-15 */
 #ifndef TOOL_VERSION_gcc
@@ -133,7 +153,7 @@
 #endif /* MIN_TOOL_VERSION_strip */
 
 #ifndef CURRENT_COMPONENT_ID
-#define CURRENT_COMPONENT_ID "fastpass-0.1.0.0-7CBPXvIi7fBJBSVoF8CfLM-fastpass"
+#define CURRENT_COMPONENT_ID "fastpass-0.1.0.0-7btMXutbQIy9EIpr98UlnX-fastpass"
 #endif /* CURRENT_COMPONENT_ID */
 #ifndef CURRENT_PACKAGE_VERSION
 #define CURRENT_PACKAGE_VERSION "0.1.0.0"
