@@ -5,17 +5,14 @@ import Control.Monad (replicateM)
 import Data.Char (ord, chr)
 import Control.Concurrent.Async (async, wait, Async)
 
-charSet :: String 
-charSet = ['a'..'z'] ++ ['A'..'Z'] ++ ['0'..'9'] ++ "!@#$%^&*(){}\\=-<>:~"
-
-generatePasswordAsync :: Int -> IO (Async String)
-generatePasswordAsync len = async $ do
+generatePasswordAsync :: Int -> Text -> IO (Async Text)
+generatePasswordAsync len list = async $ do
     g <- newStdGen
     let
         getRandomChar :: StdGen -> (Char, StdGen)
         getRandomChar gen =
-            let (idx, newGen) = randomR (0, length charSet - 1) gen
-            in (charSet !! idx, newGen)
+            let (idx, newGen) = randomR (0, length list - 1) gen
+            in (list !! idx, newGen)
 
         buildPassword :: Int -> StdGen -> String
         buildPassword 0 _ = []
