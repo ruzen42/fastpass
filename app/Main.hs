@@ -3,22 +3,25 @@ module Main where
 import RandomGenerator
 import Control.Concurrent.Async (wait)
 import Options.Applicative
+import qualified Data.Text as T
+import qualified Data.Text.IO as TIO
 
 data Options = Options
   { passwordSize :: Int
-  , listSymbols  :: Text
+  , listSymbols  :: T.Text
   }
 
 main :: IO ()
 main = do
   options <- execParser parserInfo
   let size = passwordSize options
-  task <- RandomGenerator.generatePasswordAsync size
+      list = listSymbols  options
+  task <- RandomGenerator.generatePasswordAsync size list
   password <- wait task
-  putStrLn password
+  TIO.putStrLn password
 
-defaultList :: Text
-defaultList = ['a'..'b'] ++ ['0'..'9'] ++ ['A'..'Z'] ++ ['!'++'?']
+defaultList :: T.Text
+defaultList = T.pack $ ['a'..'b'] ++ ['0'..'9'] ++ ['A'..'Z'] ++ ['!'..'?']
 
 optionsParser :: Parser Options
 optionsParser = Options
@@ -40,6 +43,6 @@ optionsParser = Options
 parserInfo :: ParserInfo Options
 parserInfo = info (optionsParser <**> helper)
   ( fullDesc
- <> progDesc "simple program to generate password,\n using fastpass <number>"
+ <> progDesc "simple async program to generate password,\n using fastpass <number>"
  <> header "fastpass - password generator written in Haskell"
   )
