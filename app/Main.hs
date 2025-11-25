@@ -16,8 +16,7 @@ main = do
   options <- execParser parserInfo
   let size = passwordSize options
       list = listSymbols  options
-  task <- RandomGenerator.generatePasswordAsync size list
-  password <- wait task
+  password <- RandomGenerator.generatePasswordParallel size list
   TIO.putStrLn password
 
 defaultList :: T.Text
