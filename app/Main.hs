@@ -42,6 +42,6 @@ optionsParser = Options
 parserInfo :: ParserInfo Options
 parserInfo = info (optionsParser <**> helper)
   ( fullDesc
- <> progDesc "simple async program to generate password,\n using fastpass <number>"
+ <> progDesc "program to generate passwords,\n using fastpass -l <number> -L <set-of-chars>"
  <> header "fastpass - password generator written in Haskell"
   )
