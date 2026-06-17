@@ -2,7 +2,7 @@
   description = "fastpass - Haskell password generator";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
     flake-utils.url = "github:numtide/flake-utils";
   };
 
@@ -11,7 +11,7 @@
       let
         pkgs = import nixpkgs { inherit system; };
         haskell = pkgs.haskellPackages;
-        ghc = haskell.ghc9102;  # GHC 9.10.2
+        ghc = haskell.ghc9102;  
         hsDeps = haskell.ghcWithPackages (p: with p; [ text tasty random async optparse-applicative]);
       in
       {
