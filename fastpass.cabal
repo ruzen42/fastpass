@@ -8,8 +8,8 @@ homepage:           https://github.com/ruzen42/fastpass
 license:            BSD-3-Clause
 license-file:       LICENSE
 author:             ruzen42
-maintainer:         malledeferlive@gmail.com
-copyright:          "2025 Jaroslav Mihajlenko"
+maintainer:         ruzen@tuta.io
+copyright:          "2025 Ruzen42"
 category:           System
 build-type:         Simple
 extra-doc-files:    CHANGELOG.md

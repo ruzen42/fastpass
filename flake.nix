@@ -1,8 +1,6 @@
 {
-  description = "fastpass - Haskell password generator";
-
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
   };
 
@@ -11,14 +9,13 @@
       let
         pkgs = import nixpkgs { inherit system; };
         haskell = pkgs.haskellPackages;
-        ghc = haskell.ghc9102;  
-        hsDeps = haskell.ghcWithPackages (p: with p; [ text tasty random async optparse-applicative]);
       in
       {
         devShell = pkgs.mkShell {
           buildInputs = [
-            ghc
+            haskell.ghc
             pkgs.cabal-install
+            pkgs.stack
             pkgs.git
             pkgs.zlib
             pkgs.pkg-config
